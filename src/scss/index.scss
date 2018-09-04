@@ -1,0 +1,60 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    background: #9BDEFF;
+    padding: 0 pxTorem(20px);
+    @include sizing;
+    .login {
+        flex: 7;
+        width: 100%;
+        @include box_flex;
+        @include direction(column);
+        @include align;
+        @include justify;
+        .name,
+        .pwd,
+        .btn {
+            width: 80%;
+            height: pxTorem(36px);
+            margin: pxTorem(5px) 0;
+            background: #fff;
+            padding: 0 pxTorem(5px);
+            @include sizing;
+            font-size: pxTorme(14px);
+            border-radius: pxTorem(5px);
+        }
+        .btn {
+            background: #2197FC;
+            color: #fff;
+        }
+        .forget {
+            width: 80%;
+            height: pxTorem(50px);
+            @include box_flex;
+            @include align;
+            @include justify(space-between);
+        }
+        .msg {
+            color: #999;
+            margin-top: pxTorem(20px);
+            span {
+                color: #2197FC;
+            }
+        }
+    }
+    .user {
+        width: 100%;
+        flex: 3;
+        @include box_flex;
+        @include direction(column);
+        .tit {
+            width: 100%;
+            text-align: center;
+            color: #999;
+        }
+    }
+}
